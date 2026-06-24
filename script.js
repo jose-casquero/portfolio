@@ -84,11 +84,11 @@ function processCommand(cmd) {
             break;
         case 'cv':
             printToTerminal("Opening Resume...");
-            window.open('https://drive.google.com/file/d/11UhfCb5Ue1NCKK7rEse4T_5ipNWxC3_N/view?usp=sharing', '_blank');
+            window.open('https://drive.google.com/file/d/18PhwahnQBZWdbuUJB4eM4scFq70hfNUe/view?usp=sharing', '_blank');
             break;
         case 'whatsapp':
             printToTerminal("Redirecting to WhatsApp...");
-            window.open('https://wa.me/34619490746', '_blank');
+            window.open('https://wa.me/48511818966', '_blank');
             break;
         case 'github':
             printToTerminal("Opening GitHub profile...");
