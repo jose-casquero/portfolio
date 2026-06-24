@@ -15,7 +15,7 @@ const COMMANDS = {
 Available commands:
   about      - Display brief information about me
   skills     - List technical skills and stack
-  projects   - View my latest backend projects (Kafka, Spring Security, etc.)
+  projects   - Explore featured backend architectures and engineering showcases
   cv         - Download / View my Resume (PDF)
   whatsapp   - Open a direct WhatsApp chat with me
   github     - Redirect to my GitHub profile
@@ -92,7 +92,7 @@ function processCommand(cmd) {
             break;
         case 'github':
             printToTerminal("Opening GitHub profile...");
-            window.open('https://github.com/jj-casquero', '_blank');
+            window.open('https://github.com/jose-casquero', '_blank');
             break;
         case 'linkedin':
             printToTerminal("Opening LinkedIn profile...");
