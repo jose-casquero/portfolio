@@ -37,20 +37,36 @@ Cloud & Deployment: Heroku, Render
 Testing: JUnit, Jest
 Architecture: REST APIs, Microservices, BPM systems
 Methodologies: Agile, Scrum, Waterfall, Lean
-`,
-    projects: `
-1. Brute Force Threat Detector
-   - Tech: Java, Apache Kafka, Jackson.
-   - Info: Stateful stream processing engine that correlates real-time auth logs to block attacks.
+`,    
 
-2. Stateless SaaS Portal
-   - Tech: Spring Boot, Spring Security 6, OAuth2.
-   - Info: Delegated authentication system (GitHub/Google) eliminating local password storage.
+projects: `
+1. Auth Service - Security Microservice
+   - Tech: Java 17, Spring Boot, Spring Data JPA, JWT, BCrypt, H2.
+   - Info: Enterprise authentication and authorization microservice featuring stateless JWT handling, Spring Data JPA, and BCrypt password hashing.
 
-3. Legacy to Cloud Migration Pipeline
-   - Tech: Spring Boot, Spring Batch, H2.
-   - Info: Chunk-oriented ETL pipeline processing large datasets transactionally and efficiently.
+2. Cloud-Native Status Monitor
+   - Tech: Java 21, Spring Boot 3, Spring WebFlux, Reactive Programming, H2.
+   - Info: Lightweight, non-blocking microservice utilizing WebFlux to asynchronously monitor external API health and uptime with high concurrency.
+
+3. Stateless SaaS Portal
+   - Tech: Java 17, Spring Boot 3, Spring Security 6, OAuth2 Client.
+   - Info: Delegated authentication REST API implementing OAuth2 Authorization Code Grant (GitHub/Google) without local password storage.
+
+4. Real-Time Brute Force Threat Detector
+   - Tech: Java 17, Apache Kafka, Jackson, SLF4J.
+   - Info: Stateful stream processing engine that correlates real-time auth log streams to detect and mitigate brute-force cyber attacks dynamically.
+
+5. Legacy to Cloud Migration Pipeline
+   - Tech: Java 17, Spring Boot 3, Spring Batch 5, H2.
+   - Info: Chunk-oriented ETL pipeline processing large datasets transactionally and efficiently with memory optimization and rollback safety.
+
+6. Linux Telemetry & Shell API
+   - Tech: Java 17, Spring Boot 3, ProcessBuilder, POSIX Shell.
+   - Info: System telemetry microservice bridging the JVM and Linux kernel (/proc) to expose hardware metrics and dynamic ASCII rendering via REST.
 `
+
+
+
 };
 
 window.onload = () => {
@@ -84,7 +100,7 @@ function processCommand(cmd) {
             break;
         case 'cv':
             printToTerminal("Opening Resume...");
-            window.open('https://drive.google.com/file/d/18PhwahnQBZWdbuUJB4eM4scFq70hfNUe/view?usp=sharing', '_blank');
+            window.open('https://drive.google.com/file/d/1a6XsiWU_STqeCzy3p9f7bjpFzAngNUBC/view?usp=sharing', '_blank');
             break;
         case 'whatsapp':
             printToTerminal("Redirecting to WhatsApp...");
@@ -96,7 +112,6 @@ function processCommand(cmd) {
             break;
         case 'linkedin':
             printToTerminal("Opening LinkedIn profile...");
-            // Replace with your LinkedIn URL
             window.open('https://www.linkedin.com/in/jose-c-95b5b61b5/', '_blank');
             break;
         case 'clear':
